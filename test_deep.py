@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from networks import MyNet, data_test
+from deep_networks import MyNet, data_test
 from torchvision import transforms,datasets
 from PIL import Image
 import matplotlib.pyplot as plt
@@ -12,7 +12,7 @@ pipeline = transforms.Compose([transforms.ToTensor(),
 if __name__ == "__main__":
 
     model = MyNet()
-    model.load_state_dict(torch.load(rf"C:\Users\31722\PycharmProjects\AI\my_pt\200_model.pt"))
+    model.load_state_dict(torch.load(rf"C:\Users\31722\PycharmProjects\AI\my_pt\240_deep_model.pt"))
     right = 0
     for i in range(1000):
         imgs, labels = data_test[i]
